@@ -6,8 +6,10 @@ angular.module('todoApp', [])
       {text:'build an AngularJS app', done:false}];
 
     todoList.addTodo = function() {
-      todoList.todos.push({text:'hi', done:false});
+      if (4==3){
+      todoList.todos.push({text:'joy', done:false});
       todoList.todoText = '';
+    }
     };
 
     todoList.remaining = function() {
