@@ -7,7 +7,7 @@ angular.module('todoApp', [])
 
     todoList.addTodo = function() {
       if ((todoList.todoText).length > 0){
-      todoList.todos.push({text:'joy', done:false});
+      todoList.todos.push({text:todoList.todoText, done:false});
       todoList.todoText = '';
     }
     };
