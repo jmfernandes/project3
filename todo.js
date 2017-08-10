@@ -1,9 +1,9 @@
 angular.module('todoApp', [])
   .controller('TodoListController', function() {
     var todoList = this;
-    todoList.saved =localStorage.getItem('todos');
+    todoList.saved = localStorage.getItem('todos');
     todoList.todos = (localStorage.getItem('todos')!==null) ?
-    JSON.parse(todoList.saved) : [ {text: 'Learn AngularJS', done: false}, {text: 'Build an Angular app', done: false} ];
+    JSON.parse(todoList.saved) : [ {text: 'Learn AngularJS', done: true}, {text: 'Build an Angular app', done: true}, {text: 'Show Kim', done: false} ];
     localStorage.setItem('todos',JSON.stringify(todoList.todos));
 
     todoList.addTodo = function() {
