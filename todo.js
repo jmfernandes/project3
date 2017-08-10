@@ -6,7 +6,7 @@ angular.module('todoApp', [])
       {text:'build an AngularJS app', done:false}];
 
     todoList.addTodo = function() {
-      if ((todoList.todoText).length > 0){
+      if (todoList.todoText){
       todoList.todos.push({text:todoList.todoText, done:false});
       todoList.todoText = '';
     }
