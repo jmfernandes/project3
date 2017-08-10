@@ -4,11 +4,13 @@ angular.module('todoApp', [])
     todoList.todos = [
       {text:'learn AngularJS', done:true},
       {text:'build an AngularJS app', done:false}];
+      localStorage.setItem('todos',JSON.stringify(todoList.todos));
 
     todoList.addTodo = function() {
     if (todoList.todoText){
       todoList.todos.push({text:todoList.todoText, done:false});
       todoList.todoText = '';
+      localStorage.setItem('todos',JSON.stringify(todoList.todos));
     }
     };
 
@@ -26,5 +28,6 @@ angular.module('todoApp', [])
       angular.forEach(oldTodos, function(todo) {
         if (!todo.done) todoList.todos.push(todo);
       });
+      localStorage.setItem('todos',JSON.stringify(todoList.todos));
     };
   });
