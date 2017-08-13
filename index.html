@@ -2,11 +2,18 @@
 <html ng-app="todoApp">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="todo.js"></script>
     <title>todo list</title>
     <link rel="stylesheet" href="todo.css">
+    <script>
+$(function(){
+  $("#header").load("./_includes/header.html");
+});
+</script>
   </head>
   <body>
+    <div id="header"></div>
     <h2>Todo</h2>
     <div ng-controller="TodoListController as todoList">
       <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
