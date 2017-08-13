@@ -20,7 +20,7 @@ $(function(){
         <article class="post-content">
 
 
-    <h1>Todo</h1>
+    <h1 class="post-title">Todo List</h1>
     <div ng-controller="TodoListController as todoList">
       <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
       [ <a href="" ng-click="todoList.archive()">archive</a> ]
